@@ -1,0 +1,157 @@
+:root {
+  --body-bg-color: #dce4e3;
+  --green: #18c29c;
+  --light-green: #8ed7c6;
+  --light-grey: #dce4e3;
+  --text-color: #084236;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+body {
+  height: 100vh;
+  font-size: 14px;
+  font-family: poppins, sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  gap: 1rem;
+}
+
+.container,
+main {
+  height: 100vh;
+}
+
+aside {
+  background-color: var(--green);
+  display: flex;
+  flex-direction: column;
+  width: 238px;
+  height: 100vh;
+}
+
+/*===========SIDEBAR CLOSE==============*/
+
+aside.close .asideTop .logoSection,
+aside.close nav .search input,
+aside.close nav a p,
+aside.close footer .profile-footer .profile-photo,
+aside.close footer .profile-footer .profile-id {
+  display: none;
+}
+
+aside.close nav a {
+  justify-content: center;
+  margin-left: -1rem;
+  width: auto;
+}
+
+aside.close {
+  width: 6rem;
+  transition: all 300ms ease;
+}
+
+aside.close nav a img:hover {
+  background: var(--light-green);
+  padding: 0.3rem;
+  border-radius: 0.4rem;
+  transition: all 100ms ease;
+}
+
+aside.close footer .logout a img:hover {
+  color: var(--light-green);
+  transition: all 100ms ease;
+}
+
+/*===========SIDEBAR OPEN==============*/
+
+aside .asideTop {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+aside .asideTop .btnSection button {
+  background: none;
+  cursor: pointer;
+}
+
+aside .search {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--light-green);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 1rem 1rem 1rem 0.6rem;
+}
+aside .search input {
+  background: var(--light-green);
+}
+
+aside nav {
+  margin-left: 0.46rem;
+}
+
+aside nav a {
+  display: flex;
+  align-items: center;
+  margin-left: 1.4rem;
+  margin-bottom: 1rem;
+  position: relative;
+  height: 3.5rem;
+  width: 10rem;
+  padding: 0 0.5rem 0 0.5rem;
+  border-radius: 1rem;
+  gap: 0.5rem;
+  color: black;
+}
+
+aside nav a:hover {
+  background: var(--light-green);
+  transform: scale(1.2, 1.2);
+  transition: all 100ms ease;
+}
+
+aside footer {
+  margin-top: auto;
+}
+
+aside footer .profile-footer {
+  display: flex;
+  justify-content: space-between;
+  background: var(--light-green);
+  padding: 0.5rem;
+}
+
+aside footer img {
+  border-radius: 5px;
+  width: 3rem;
+  height: 2rem;
+}
+
+aside footer .profile-footer .logout {
+  margin-left: 0.6rem;
+}
+aside footer .profile-footer .logout a img:hover {
+  transform: scale(1.2, 1.2);
+  transition: all 100ms ease;
+}
+
+h1 {
+  padding: 1rem;
+}
+
+.invisible {
+  display: none;
+}
